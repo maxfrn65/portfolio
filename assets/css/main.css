@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Figtree';
+        src: url(../fonts/Figtree.ttf) format('truetype');
+    }
+}
+
+h1 {
+    font-size: 3.815rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+h2 {
+    font-size: 3.052rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+h3 {
+    font-size: 2.411rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+h4 {
+    font-size: 1.953rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+h5 {
+    font-size: 1.563rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Figtree', sans-serif;
+}
+
+.small {
+    font-size: 0.8rem;
+    font-family: 'Figtree', sans-serif;
+}
+
+.tiny {
+    font-size: 0.64rem;
+    font-family: 'Figtree', sans-serif;
+}
+
+/* ------------------------------ Mobile ------------------------------- */
+
+@media screen and (min-width: 375px) and (max-width: 430px){
+    h1 {
+        font-size: 2.027rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    h2 {
+        font-size: 1.802rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    h3 {
+        font-size: 1.602rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    h4 {
+        font-size: 1.424rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    h5 {
+        font-size: 1.266rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    h6 {
+        font-size: 1.125rem;
+        font-weight: bold;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    p {
+        font-size: 1rem;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    .small {
+        font-size: 0.889rem;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    .tiny {
+        font-size: 0.79rem;
+        font-family: 'Figtree', sans-serif;
+    }
+}
+
+/* --------------------------------------------------------------------- */
