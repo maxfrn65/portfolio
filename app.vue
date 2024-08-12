@@ -1,6 +1,6 @@
 <template>
-  <header class="absolute top-0 left-0 p-5 w-full bg-amber-100"></header>
-  <section class="bg-red-100 h-[100vh] py-12">
+  <header class="absolute top-0 left-0 p-5 w-full bg-neutral-white"></header>
+  <section class="bg-neutral-white h-[100vh] py-12">
     <h1>Test</h1>
   </section>
   <section class="bg-gray-100 p-5">dev</section>
