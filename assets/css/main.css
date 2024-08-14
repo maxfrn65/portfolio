@@ -9,6 +9,15 @@
     }
 }
 
+@layer base {
+    @font-face {
+        font-family: 'Stix Two Text';
+        font-style: italic;
+        src: url(../fonts/StixTwoText.ttf) format('truetype');
+
+    }
+}
+
 h1 {
     font-size: 3.815rem;
     font-weight: bold;
@@ -45,7 +54,7 @@ h6 {
     font-family: 'Figtree', sans-serif;
 }
 
-p {
+p, span {
     font-size: 1rem;
     font-family: 'Figtree', sans-serif;
 }
@@ -60,6 +69,9 @@ p {
     font-family: 'Figtree', sans-serif;
 }
 
+.text-stroke-2 {
+    -webkit-text-stroke: 1px #DA5462;
+}
 /* ------------------------------ Mobile ------------------------------- */
 
 @media screen and (min-width: 375px) and (max-width: 430px){
@@ -99,7 +111,7 @@ p {
         font-family: 'Figtree', sans-serif;
     }
 
-    p {
+    p, span {
         font-size: 1rem;
         font-family: 'Figtree', sans-serif;
     }
