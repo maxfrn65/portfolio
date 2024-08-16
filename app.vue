@@ -2,6 +2,9 @@
 import ButtonsText from "~/componants/buttons/ButtonText.vue";
 import ButtonIcon from "~/componants/buttons/ButtonIcon.vue";
 import Icon from "~/componants/Icon.vue";
+
+let skills = ['Web', 'Vue.js', 'Symfony', 'Fullstack']
+let skill = skills.forEach((element) => skill = element)
 </script>
 
 <template>
@@ -30,7 +33,7 @@ import Icon from "~/componants/Icon.vue";
     </section>
   </section>
   <section class="bg-neutral-black p-5 text-white">
-    <h1>&lt;h1&gt;</h1>
+    <h1 class="font-jetbrainsmono">&lt;h1&gt;Je suis un développeur {{ skill }}</h1>
   </section>
   <section class="bg-gray-200 p-5">ui</section>
   <section class="bg-gray-100 p-5">projects</section>

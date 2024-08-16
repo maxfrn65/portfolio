@@ -17,7 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        stix: 'Stix\\ Two\\ Text'
+        stix: 'Stix\\ Two\\ Text',
+        jetbrainsmono: 'JetBrains\\ Mono',
       },
       colors: {
         primary: {
