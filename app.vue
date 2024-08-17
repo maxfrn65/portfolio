@@ -2,9 +2,53 @@
 import ButtonsText from "~/componants/buttons/ButtonText.vue";
 import ButtonIcon from "~/componants/buttons/ButtonIcon.vue";
 import Icon from "~/componants/Icon.vue";
+import { ref, computed, onMounted, watch } from 'vue';
+import DevSkills from "~/componants/DevSkills.vue";
 
-let skills = ['Web', 'Vue.js', 'Symfony', 'Fullstack']
-let skill = skills.forEach((element) => skill = element)
+// Tableau des skills
+const skills = ['JavaScript', 'Vue.js', 'PHP', 'Symfony', 'React Native'];
+
+// Tableau des couleurs associées
+const colors = ['text-yellow-500', 'text-green-500', 'text-blue-500', 'text-purple-500', 'text-indigo-500'];
+
+// Références pour l'index courant et le texte affiché
+const currentIndex = ref(0);
+const displayedText = ref('');
+
+// Propriété calculée pour le skill actuel
+const currentSkill = computed(() => skills[currentIndex.value]);
+
+// Propriété calculée pour la couleur actuelle
+const currentColor = computed(() => colors[currentIndex.value]);
+
+// Fonction pour démarrer l'effet d'écriture
+const startTypingEffect = () => {
+  let charIndex = 0;
+  displayedText.value = '';
+
+  const typeWriterInterval = setInterval(() => {
+    if (charIndex < currentSkill.value.length) {
+      displayedText.value += currentSkill.value[charIndex];
+      charIndex++;
+    } else {
+      clearInterval(typeWriterInterval);
+      // Démarrer la rotation du mot suivant après une pause
+      setTimeout(() => {
+        currentIndex.value = (currentIndex.value + 1) % skills.length;
+      }, 2000); // Pause de 1 seconde avant le prochain mot
+    }
+  }, 100); // Temps entre chaque caractère (100ms)
+};
+
+// Démarrer l'effet d'écriture au montage du composant
+onMounted(() => {
+  startTypingEffect();
+});
+
+// Regarder les changements d'index pour redémarrer l'effet d'écriture
+watch(currentIndex, () => {
+  startTypingEffect();
+});
 </script>
 
 <template>
@@ -32,8 +76,20 @@ let skill = skills.forEach((element) => skill = element)
       </div>
     </section>
   </section>
-  <section class="bg-neutral-black p-5 text-white">
-    <h1 class="font-jetbrainsmono">&lt;h1&gt;Je suis un développeur {{ skill }}</h1>
+  <section class="bg-neutral-black p-5 text-white flex flex-col gap-[50px] py-[100px]">
+    <h1 class="font-jetbrainsmono">&lt;h1&gt;Je suis un développeur<br><span :class="currentColor" class="w-fit font-jetbrainsmono text-[32.4px]">{{ displayedText }}<span class="blinking-cursor">|</span></span>&lt;/h1&gt;</h1>
+    <p class="font-jetbrainsmono">&lt;p&gt;Je maitrise les fondamentaux du développement Web. Je suis capable de concevoir des applications web robustes avec des technologies modernes.&lt;/p&gt;</p>
+    <div class="grid grid-cols-4 gap-[20px]">
+      <dev-skills file-name="js" alt="JavaScript" />
+      <dev-skills alt="PHP" file-name="php" />
+      <dev-skills alt="Symfony" file-name="symfony" />
+      <dev-skills alt="Vue.js" file-name="vuejs" />
+      <dev-skills alt="React Native" file-name="react" />
+      <dev-skills alt="MySQL" file-name="mysql" />
+      <dev-skills alt="Git" file-name="git" />
+      <dev-skills alt="Docker" file-name="docker" />
+      <dev-skills alt="Postman" file-name="postman" />
+    </div>
   </section>
   <section class="bg-gray-200 p-5">ui</section>
   <section class="bg-gray-100 p-5">projects</section>
@@ -42,3 +98,17 @@ let skill = skills.forEach((element) => skill = element)
   <section class="bg-gray-900 p-5"><p class="text-white">footer</p></section>
 
 </template>
+
+<style scoped>
+.blinking-cursor {
+  font-weight: bold;
+  font-size: 1em;
+  color: inherit;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+</style>
