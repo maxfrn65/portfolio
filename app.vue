@@ -56,7 +56,7 @@ watch(currentIndex, () => {
   <section>
     <header class="flex justify-end gap-3 absolute top-0 left-0 mt-[40px] w-full bg-neutral-white px-[20px]">
       <button-icon url="#" iconName="Languages" :iconStrokeWidth="2"/>
-      <buttons-text url="#" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
+      <buttons-text text="Menu" url="#" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
     </header>
     <section class="flex flex-col justify-around items-center bg-neutral-white h-[100vh] pt-40 gap-[50px] px-[20px]">
       <div class="flex flex-col gap-20">
@@ -109,11 +109,11 @@ watch(currentIndex, () => {
       </div>
       <img class="h-[50%]" src="/assets/img/figma_logo.png">
     </div>
-    <h2>Je produits des <span class="text-[28.8px] text-primary-500">maquettes d’applications</span> interactive et innovantes avec une veille sur les tendances en <span class="text-[28.8px] text-primary-500">design</span> tout en prenant en compte les problématiques <span class="text-[28.8px] text-primary-500">d’accessibilité</span>.</h2>
+    <h2>Je produits des <span class="text-[28.8px] text-primary-500">maquettes d’applications</span> interactives et innovantes avec une veille sur les tendances en <span class="text-[28.8px] text-primary-500">design</span> tout en prenant en compte les problématiques <span class="text-[28.8px] text-primary-500">d’accessibilité</span>.</h2>
   </section>
-  <section class="bg-gray-100 p-5">
-    <h1>Jetez un oeil sur mes projets !</h1>
-    <button-text ></button-text>
+  <section class="flex flex-col gap-[50px] bg-gray-100 px-[20px] py-[100px] items-center">
+    <h1 class="text-center">Jetez un oeil sur mes projets !</h1>
+    <button-text text="Mes projets" url="#" icon-name="ArrowRight"></button-text>
   </section>
   <section class="bg-gray-200 p-5">about</section>
   <section class="bg-gray-100 p-5">thanks</section>
