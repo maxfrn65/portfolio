@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import ButtonsText from "~/componants/buttons/ButtonText.vue";
-import ButtonIcon from "~/componants/buttons/ButtonIcon.vue";
-import Icon from "~/componants/Icon.vue";
+import ButtonsText from "~/components/buttons/ButtonText.vue";
+import ButtonIcon from "~/components/buttons/ButtonIcon.vue";
+import Icon from "~/components/Icon.vue";
 import { ref, computed, onMounted, watch } from 'vue';
-import DevSkills from "~/componants/DevSkills.vue";
+import DevSkills from "~/components/DevSkills.vue";
+import ButtonText from "~/components/buttons/ButtonText.vue";
 
 // Tableau des skills
 const skills = ['JavaScript', 'Vue.js', 'PHP', 'Symfony', 'React Native'];
@@ -54,8 +55,8 @@ watch(currentIndex, () => {
 <template>
   <section>
     <header class="flex justify-end gap-3 absolute top-0 left-0 mt-[40px] w-full bg-neutral-white px-[20px]">
-      <button-icon url="#" iconName="Languages" iconStrokeWidth="2"/>
-      <buttons-text url="#" iconName="Menu" iconColor="white" iconStrokeWidth="2"/>
+      <button-icon url="#" iconName="Languages" :iconStrokeWidth="2"/>
+      <buttons-text url="#" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
     </header>
     <section class="flex flex-col justify-around items-center bg-neutral-white h-[100vh] pt-40 gap-[50px] px-[20px]">
       <div class="flex flex-col gap-20">
@@ -71,7 +72,7 @@ watch(currentIndex, () => {
       <div class="w-full flex justify-end">
         <div class="flex justify-center items-center">
           <img class="animate-spin-slow" src="/assets/img/circular_text.png" alt="">
-          <icon class="absolute" name="ArrowDownLeft" size="54" stroke-width="1"/>
+          <icon class="absolute" name="ArrowDownLeft" :size="54" :stroke-width="1"/>
         </div>
       </div>
     </section>
@@ -91,8 +92,29 @@ watch(currentIndex, () => {
       <dev-skills alt="Postman" file-name="postman" />
     </div>
   </section>
-  <section class="bg-gray-200 p-5">ui</section>
-  <section class="bg-gray-100 p-5">projects</section>
+  <section class="flex flex-col bg-neutral-white py-[100px] px-[20px] gap-[50px]">
+    <div class="flex justify-between items-center">
+      <div class="w-1/2">
+        <div class="relative flex w-full justify-between top-[20%]">
+          <div class="aspect-square h-4 rounded bg-primary-500"></div>
+          <div class="aspect-square h-4 rounded bg-primary-500"></div>
+        </div>
+        <div class="flex justify-center items-center border-primary-500 border-[1px] p-[10px] mx-[5px] my-[-10px]">
+          <h1 class="underline">Je suis un designer UI/UX</h1>
+        </div>
+        <div class="relative flex w-full justify-between bottom-[5%]">
+          <div class="aspect-square h-4 rounded bg-primary-500"></div>
+          <div class="aspect-square h-4 rounded bg-primary-500"></div>
+        </div>
+      </div>
+      <img class="h-[50%]" src="/assets/img/figma_logo.png">
+    </div>
+    <h2>Je produits des <span class="text-[28.8px] text-primary-500">maquettes d’applications</span> interactive et innovantes avec une veille sur les tendances en <span class="text-[28.8px] text-primary-500">design</span> tout en prenant en compte les problématiques <span class="text-[28.8px] text-primary-500">d’accessibilité</span>.</h2>
+  </section>
+  <section class="bg-gray-100 p-5">
+    <h1>Jetez un oeil sur mes projets !</h1>
+    <button-text ></button-text>
+  </section>
   <section class="bg-gray-200 p-5">about</section>
   <section class="bg-gray-100 p-5">thanks</section>
   <section class="bg-gray-900 p-5"><p class="text-white">footer</p></section>
