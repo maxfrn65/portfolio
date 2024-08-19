@@ -2,6 +2,7 @@
 import Icon from "~/components/Icon.vue";
 
 defineProps({
+  text: String,
   url: String,
   iconName: String,
   iconSize: Number,
@@ -11,11 +12,12 @@ defineProps({
 </script>
 
 <template>
-  <a :href="url"><Icon :name="iconName" :size=iconSize :color="iconColor" :stroke-width=iconStrokeWidth /><span>Menu</span></a>
+  <a :href="url"><Icon :name="iconName" :size=iconSize :color="iconColor" :stroke-width=iconStrokeWidth /><span>{{ text }}</span></a>
 </template>
 
 <style scoped>
   a {
+    width: fit-content;
     display: inline-flex;
     gap: 15px;
     padding: 15px 30px;
