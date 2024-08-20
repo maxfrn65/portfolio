@@ -23,6 +23,7 @@ defineProps({
     border-radius: 30px;
     border: #E5E5E5 solid 2px;
     transition: 150ms all ease-in-out;
+    width: fit-content;
   }
 
   a:hover {
