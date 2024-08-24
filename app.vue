@@ -28,7 +28,7 @@ function closeBurgerMenu() {
         <NuxtLink class="nav-link" @click="closeBurgerMenu" to="/projects">Mes projets</NuxtLink>
         <NuxtLink class="nav-link" @click="closeBurgerMenu" :to="{ path: '/', hash: '#about' }">À propos</NuxtLink>
       </div>
-      <button-text text="Conctact" icon-name="Mail" :icon-stroke-width="2"/>
+      <button-text url="mailto:maxime.fourna@gmail.com" text="Conctact" icon-name="Mail" :icon-stroke-width="2"/>
     </div>
     <button-icon @click="closeBurgerMenu" class="closeNavBtn hover:cursor-pointer" icon-name="X" />
   </div>

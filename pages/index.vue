@@ -118,13 +118,13 @@ watch(currentIndex, () => {
     <div class="flex flex-col gap-[30px]">
       <img src="/assets/img/pp.png" alt="Maxime Fourna">
       <div class="flex gap-[50px]">
-        <a href="#">
+        <a href="mailto:maxime.fourna@gmail.com" target="_blank">
           <icon name="Mail" :stroke-width="2" />
         </a>
-        <a href="#">
+        <a href="https://github.com/maxfrn65" target="_blank">
           <icon name="Github" :stroke-width="2" />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/mf65/" target="_blank">
           <icon name="Linkedin" :stroke-width="2" />
         </a>
       </div>
