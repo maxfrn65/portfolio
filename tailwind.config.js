@@ -17,8 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        stix: 'Stix\\ Two\\ Text',
-        jetbrainsmono: 'JetBrains\\ Mono',
+        stix: ['Stix\\ Two\\ Text', 'ui-serif'],
+        jetbrainsmono: ['JetBrains\\ Mono', 'ui-monospace'],
+        figtree: ['Figtree', 'ui-sans-serif']
       },
       colors: {
         primary: {
@@ -52,6 +53,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+      require('daisyui'),
+  ],
 }
 

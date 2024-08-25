@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import NavLink from "~/components/buttons/NavLink.vue";
+import Footer from "~/components/Footer.vue";
 import ButtonIcon from "~/components/buttons/ButtonIcon.vue";
 import ButtonText from "~/components/buttons/ButtonText.vue";
 import ButtonsText from "~/components/buttons/ButtonText.vue";
@@ -10,12 +9,14 @@ function openBurgerMenu() {
   burgerMenu.classList.remove('left-[-100%]')
   burgerMenu.classList.add('left-0')
   burgerMenu.classList.remove('hidden')
+  document.body.style.overflow = "hidden"
 }
 
 function closeBurgerMenu() {
   const burgerMenu = document.querySelector('.burgerMenu')
   burgerMenu.classList.remove('left-0')
   burgerMenu.classList.add('left-[-100%]')
+  document.body.style.overflow = "auto"
 }
 </script>
 
@@ -37,6 +38,7 @@ function closeBurgerMenu() {
     <buttons-text @click="openBurgerMenu" text="Menu" url="#" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
   </header>
   <NuxtPage />
+  <Footer />
 </template>
 
 <style scoped>

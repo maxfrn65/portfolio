@@ -1,30 +1,20 @@
 <script setup lang="ts">
-
-import ButtonsText from "~/components/buttons/ButtonText.vue";
-import ButtonIcon from "~/components/buttons/ButtonIcon.vue";
 import Icon from "~/components/Icon.vue";
 import { ref, computed, onMounted, watch } from 'vue';
 import DevSkills from "~/components/DevSkills.vue";
 import ButtonText from "~/components/buttons/ButtonText.vue";
-import NavLink from "~/components/buttons/NavLink.vue";
 
-// Tableau des skills
 const skills = ['JavaScript', 'Vue.js', 'PHP', 'Symfony', 'React Native'];
 
-// Tableau des couleurs associées
 const colors = ['text-yellow-500', 'text-green-500', 'text-blue-500', 'text-purple-500', 'text-indigo-500'];
 
-// Références pour l'index courant et le texte affiché
 const currentIndex = ref(0);
 const displayedText = ref('');
 
-// Propriété calculée pour le skill actuel
 const currentSkill = computed(() => skills[currentIndex.value]);
 
-// Propriété calculée pour la couleur actuelle
 const currentColor = computed(() => colors[currentIndex.value]);
 
-// Fonction pour démarrer l'effet d'écriture
 const startTypingEffect = () => {
   let charIndex = 0;
   displayedText.value = '';
@@ -35,20 +25,18 @@ const startTypingEffect = () => {
       charIndex++;
     } else {
       clearInterval(typeWriterInterval);
-      // Démarrer la rotation du mot suivant après une pause
+
       setTimeout(() => {
         currentIndex.value = (currentIndex.value + 1) % skills.length;
-      }, 2000); // Pause de 1 seconde avant le prochain mot
+      }, 2000);
     }
-  }, 100); // Temps entre chaque caractère (100ms)
+  }, 100);
 };
 
-// Démarrer l'effet d'écriture au montage du composant
 onMounted(() => {
   startTypingEffect();
 });
 
-// Regarder les changements d'index pour redémarrer l'effet d'écriture
 watch(currentIndex, () => {
   startTypingEffect();
 });
@@ -140,9 +128,6 @@ watch(currentIndex, () => {
   <section class="flex flex-col items-center bg-neutral-white py-[100px] px-[20px] gap-[50px]">
     <h1>Merci d'avoir regardé !</h1>
     <p>Made with ❤️ with Nuxt.js, Strapi and Anime.js</p>
-  </section>
-  <section class="flex flex-col items-center bg-neutral-black py-[50px] px-[20px] text-neutral-white">
-    <p>© Copyright 2024 — Tous droits réservés</p>
   </section>
 </template>
 
