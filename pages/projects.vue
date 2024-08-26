@@ -93,23 +93,23 @@ function closeModal() {
   </section>
 
   <!-- Section des projets -->
-  <section class="flex flex-col items-center bg-neutral-white gap-[30px] my-[50px] px-[20px]">
+  <section class="grid grid-cols-1 md:grid-cols-4 bg-neutral-white gap-[30px] my-[50px] px-[20px]">
     <NuxtLink
         @click.prevent="openModal(project)"
-        class="flex flex-col gap-[10px] p-[20px] border-[1px]  border-greys-light transition duration-200 active:scale-[98%] active:bg-greys-light rounded-[20px]"
+        class="flex flex-col gap-[10px] p-[20px] border-[1px] h-fit border-greys-light transition duration-200 active:scale-[98%] active:bg-greys-light rounded-[20px] md:hover:scale-[102%] md:hover:bg-greys-light md:hover:cursor-pointer"
         v-for="project in currentSection?.data"
         :key="project.id"
     >
-      <img class="rounded-[10px]" :src="'http://localhost:1337' + project.attributes.imgs.data[0]?.attributes.url" alt="project.attributes.title">
+      <img class="rounded-[10px]" :src="'http://pf-be.maximefourna.fr' + project.attributes.imgs.data[0]?.attributes.url" alt="project.attributes.title">
       <div class="flex flex-col gap-[5px]">
-        <h1>{{ project.attributes.title }}</h1>
-        <h6>{{ project.attributes.tech }}</h6>
+        <h3>{{ project.attributes.title }}</h3>
+        <p>{{ project.attributes.tech }}</p>
       </div>
     </NuxtLink>
   </section>
 
   <!-- Modale DaisyUI -->
-  <div v-if="showModal" class="modal modal-open">
+  <div v-if="showModal" class="modal modal-open w-full">
     <div class="modal-box">
       <div class="flex justify-end mb-[20px]">
         <button-icon @click="closeModal" icon-name="X" />
@@ -127,13 +127,13 @@ function closeModal() {
               :key="image.id"
               class="h-fit"
           >
-            <img :src="'http://localhost:1337' + image.attributes.url" alt="image.attributes.name" class="rounded-lg" />
+            <img :src="'http://pf-be.maximefourna.fr' + image.attributes.url" alt="image.attributes.name" class="rounded-lg" />
           </swiper-slide>
         </swiper-container>
         <h2 class="mt-[30px]">{{ selectedProject?.attributes.title }}</h2>
         <p class="py-4">{{ selectedProject?.attributes.description }}</p>
       </div>
-      <div class="modal-action">
+      <div class="modal-action" v-if="selectedProject?.attributes.link">
         <button-text :url="selectedProject?.attributes.link" text="Voir le projet" target="_blank" />
       </div>
     </div>

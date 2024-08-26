@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="bg-greys-dark flex justify-center aspect-square items-center rounded-[10px]">
-    <img :src="'/imgs/' + fileName + '.png'" :alt="alt">
+  <div class="bg-greys-dark flex justify-center aspect-square items-center rounded-[10px] md:h-[100px] md:w-auto">
+    <img class="md:h-1/4" :src="'/imgs/' + fileName + '.png'" :alt="alt">
   </div>
 </template>

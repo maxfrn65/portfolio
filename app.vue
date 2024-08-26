@@ -33,9 +33,9 @@ function closeBurgerMenu() {
     </div>
     <button-icon @click="closeBurgerMenu" class="closeNavBtn hover:cursor-pointer" icon-name="X" />
   </div>
-  <header class="flex justify-end gap-3 absolute top-0 left-0 mt-[40px] w-full bg-neutral-white px-[20px]">
-    <button-icon url="#" iconName="Languages" :iconStrokeWidth="2"/>
-    <buttons-text @click="openBurgerMenu" text="Menu" url="#" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
+  <header class="flex justify-end gap-3 absolute top-0 left-0 mt-[40px] w-full bg-neutral-white px-[20px] md:px-[170px]">
+    <button-icon icon-name="Home" icon-stroke-width="2" url="/"/>
+    <buttons-text @click="openBurgerMenu" text="Menu" iconName="Menu" iconColor="white" :iconStrokeWidth="2"/>
   </header>
   <NuxtPage />
   <Footer />

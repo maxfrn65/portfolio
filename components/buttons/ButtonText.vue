@@ -31,6 +31,7 @@ defineProps({
   a:hover {
     transform: scale(1.05);
     box-shadow: #E5E5E5 5px 5px 10px;
+    cursor: pointer;
   }
 
   a:active {

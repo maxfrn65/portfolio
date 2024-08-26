@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'selector',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -52,6 +53,9 @@ export default {
         'spin-slow': 'spin 10s linear infinite',
       }
     },
+  },
+  daisyui: {
+    themes: ["light"],
   },
   plugins: [
       require('daisyui'),
