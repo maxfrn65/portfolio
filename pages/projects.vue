@@ -100,7 +100,7 @@ function closeModal() {
         v-for="project in currentSection?.data"
         :key="project.id"
     >
-      <img class="rounded-[10px]" :src="'http://pf-be.maximefourna.fr' + project.attributes.imgs.data[0]?.attributes.url" alt="project.attributes.title">
+      <img class="rounded-[10px]" :src="'https://pf-be.maximefourna.fr' + project.attributes.imgs.data[0]?.attributes.url" alt="project.attributes.title">
       <div class="flex flex-col gap-[5px]">
         <h3>{{ project.attributes.title }}</h3>
         <p>{{ project.attributes.tech }}</p>
@@ -127,7 +127,7 @@ function closeModal() {
               :key="image.id"
               class="h-fit"
           >
-            <img :src="'http://pf-be.maximefourna.fr' + image.attributes.url" alt="image.attributes.name" class="rounded-lg" />
+            <img :src="'https://pf-be.maximefourna.fr' + image.attributes.url" alt="image.attributes.name" class="rounded-lg" />
           </swiper-slide>
         </swiper-container>
         <h2 class="mt-[30px]">{{ selectedProject?.attributes.title }}</h2>

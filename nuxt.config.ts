@@ -13,6 +13,6 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/strapi'],
   strapi: {
-    url: 'http://pf-be.maximefourna.fr'
+    url: 'https://pf-be.maximefourna.fr'
   },
 })
