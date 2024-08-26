@@ -64,7 +64,7 @@ watch(currentIndex, () => {
     </section>
   </section>
   <section class="bg-neutral-black p-5 text-white flex flex-col gap-[50px] py-[100px] px-[20px] md:px-[170px]">
-    <h1 class="font-jetbrainsmono">&lt;h1&gt;Je suis un développeur<br><span :class="currentColor" class="text-[1.802rem] md:text-[3.052rem] w-fit font-jetbrainsmon">{{ displayedText }}<span class="blinking-cursor">|</span></span>&lt;/h1&gt;</h1>
+    <h1 class="font-jetbrainsmono">&lt;h1&gt;Je suis un développeur<br><span :class="currentColor" class="text-[1.802rem] font-jetbrainsmono md:text-[3.052rem] w-fit">{{ displayedText }}<span class="blinking-cursor">|</span></span>&lt;/h1&gt;</h1>
     <p class="font-jetbrainsmono">&lt;p&gt;Je maitrise les fondamentaux du développement Web. Je suis capable de concevoir des applications web robustes avec des technologies modernes.&lt;/p&gt;</p>
     <div class="grid grid-cols-4 gap-[20px] w-fit md:grid-cols-6">
       <dev-skills file-name="js" alt="JavaScript" />
@@ -99,7 +99,7 @@ watch(currentIndex, () => {
     <h2>Je produits des <span class="text-[1.802rem] md:text-[3.052rem] text-primary-500">maquettes d’applications</span> interactives et innovantes avec une veille sur les tendances en <span class="text-[1.802rem] md:text-[3.052rem] text-primary-500">design</span> tout en prenant en compte les problématiques <span class="text-[1.802rem] md:text-[3.052rem] text-primary-500">d’accessibilité</span>.</h2>
   </section>
   <section class="flex flex-col gap-[50px] bg-neutral-white px-[20px] py-[100px] items-center">
-    <h1 class="text-center">Intéressé par mon<br>profil ?<br>Jetez un oeil sur mes projets !</h1>
+    <h1 class="text-center">Intéressé par mon profil ?<br>Jetez un oeil sur mes projets !</h1>
     <button-text text="Mes projets" url="/projects" icon-name="ArrowRight"></button-text>
   </section>
   <section id="about" class="flex flex-col items-center bg-neutral-white py-[100px] px-[20px] gap-[50px] md:px-[170px]">
@@ -128,8 +128,8 @@ watch(currentIndex, () => {
       Wordpress.
     </p>
   </section>
-  <section class="flex flex-col items-center bg-neutral-white py-[100px] px-[20px] gap-[50px]">
-    <h1>Merci d'avoir regardé !</h1>
+  <section class="flex flex-col justify-center items-center bg-neutral-white py-[100px] px-[20px] gap-[50px]">
+    <h1 class="text-center">Merci d'avoir regardé !</h1>
     <p>Made with ❤️ with Nuxt and Strapi</p>
   </section>
 </template>

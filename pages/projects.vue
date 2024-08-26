@@ -72,7 +72,7 @@ function closeModal() {
     </div>
 
     <!-- Section des boutons -->
-    <div class="flex bg-neutral-white border-greys-light border p-[5px] rounded-[30px] relative">
+    <div class="flex bg-neutral-white border-greys-light border p-[5px] rounded-[30px] mt-[50px] relative">
       <NuxtLink
           @click="devSection"
           id="devButton"
